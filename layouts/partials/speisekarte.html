@@ -1,0 +1,39 @@
+{{/* layouts/partials/speisekarte.html */}}
+
+<!-- top‐level “Speisekarte” jump anchor -->
+<div id="speisekarte" class="anchor"></div>
+
+{{ partial "menu-categories.html" . }}
+
+{{ with .Site.Data.menu.categories }}
+  {{ range . }}
+    <!-- per‐category jump anchor -->
+    <div id="{{ .id }}" class="anchor"></div>
+
+    <section class="menu-section">
+      <div class="menu-hero">
+        <h2>{{ .title }}</h2>
+        <!-- straight image tag, lazy‐loaded -->
+        <img
+          src="{{ printf "/images/%s" .img }}"
+          alt="{{ .title }} Banner"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="menu-grid">
+        {{ range .items }}
+          <article class="menu-item">
+            <h3>
+              {{ .name }}
+              {{ if .xxl }}<span class="badge">⭐</span>{{ end }}
+            </h3>
+            {{ with .desc }}<p>{{ . }}</p>{{ end }}
+            <span class="price">{{ printf "%.2f" .price }} €</span>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

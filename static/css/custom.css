@@ -1,0 +1,233 @@
+:root {
+  --brand-primary: #0D3B66;
+  --brand-secondary: #D4A021;
+  --text-on-primary: #ffffff;
+
+  --header-height: 4rem;
+  --submenu-height: 3rem;
+  --anchor-offset: calc(var(--header-height) + var(--submenu-height));
+}
+
+html {
+  scroll-padding-top: var(--anchor-offset);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0; padding: 0;
+  font-family: sans-serif;
+}
+
+.menu-section {
+  /* keep your existing styles… */
+  background: var(--brand-primary);
+  color: var(--text-on-primary);
+  padding: 4rem 2rem;
+
+  /* this single line keeps the top of .menu-section from hiding under header */
+  scroll-margin-top: var(--anchor-offset);
+}
+
+/* 3) (Optional) if you keep per-category <div class="anchor" id="…">, give it the same offset */
+
+.anchor {
+  display: block;
+  position: relative;
+  top: calc(-1 * var(--scroll-offset));
+  height: var(--scroll-offset);
+  visibility: hidden;
+}
+
+.menu-hero {
+  text-align: center;
+  background: #fff;
+  color: var(--brand-primary);
+  padding: 1rem;
+  margin-bottom: 2rem;
+ 
+}
+
+.menu-hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.menu-hero {
+  text-align: center;
+  background: #fff;
+  color: var(--brand-primary);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.menu-hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item h3 {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dotted var(--text-on-primary);
+  display: inline-block;
+}
+
+.badge {
+  color: var(--brand-secondary);
+  margin-left: 0.25rem;
+}
+
+.menu-item p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.menu-item .price {
+  font-weight: bold;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item h3 {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dotted var(--text-on-primary);
+  display: inline-block;
+}
+
+.badge {
+  color: var(--brand-secondary);
+  margin-left: 0.25rem;
+}
+
+.menu-item p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.menu-item .price {
+  font-weight: bold;
+}
+
+.submenu-nav {
+  background: var(--text-on-primary);
+  padding: 0.5rem 1rem;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--brand-secondary);
+  position: sticky;
+  top: 4rem;
+  z-index: 50;
+}
+
+.submenu-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu-nav a {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.submenu-nav a:hover,
+.submenu-nav a:focus {
+  color: var(--brand-secondary);
+}
+
+.submenu-nav a.active {
+  border-bottom: 2px solid var(--brand-secondary);
+}
+
+.kontakt-map > [data-ti-widget] {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .site-hero { padding: 3rem 1rem; }
+}
+.site-footer {
+  background: var(--brand-primary);
+  color: var(--text-on-primary);
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact address {
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li + li {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--text-on-primary);
+  text-decoration: none;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.footer-social .social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.hero-intro {
+  background: url('/images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.hero-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+.hero-intro > * { position: relative; z-index: 1; }
+
+

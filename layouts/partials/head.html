@@ -1,0 +1,78 @@
+<head>
+  <!-- 1) Basic Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 2) SEO -->
+  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <!-- 3) Canonical & Robots -->
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="robots" content="index, follow">
+
+  <!-- 4) Open Graph / Facebook -->
+  <meta property="og:type"   content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:title"  content="{{ .Title }} – {{ .Site.Title }}">
+  <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:url"    content="{{ .Permalink }}">
+  <meta property="og:image"  content="{{ with .Params.image }}{{ . }}{{ else }}{{ .Site.Params.ogImage }}{{ end }}">
+
+  <!-- 5) Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="{{ .Title }} – {{ .Site.Title }}">
+  <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="twitter:image"       content="{{ with .Params.image }}{{ . }}{{ else }}{{ .Site.Params.ogImage }}{{ end }}">
+
+  <!-- 6) Favicon & Touch Icons -->
+  <link rel="icon"     href="{{ "favicon.ico" | relURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+
+  <!-- 7) Preconnect / Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="{{ "css/custom.css" | relURL }}" as="style">
+
+  <!-- 8) Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- 9) JSON-LD LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name":     "{{ .Site.Title }}",
+    "image":    "{{ .Site.Params.ogImage }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Betonstraße 01",
+      "addressLocality": "Melle",
+      "postalCode": "49324",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49 5422 9289993",
+    "openingHours": [
+      "Mo-Sa 11:00-14:00",
+      "Mo-Sa 17:00-21:00",
+      "Su 17:00-21:00"
+    ]
+  }
+  </script>
+
+  <!-- 10) Analytics (e.g. Google Analytics) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','YOUR_ID');
+  </script> -->
+
+  {{ if .IsHome }}
+    {{ partial "critical-css.html" . }}  <!-- if you generate critical-CSS -->
+  {{ end }}
+
+
+  {{/* any additional head-injections (Ananke, SEO, etc.) */}}
+  {{ partial "head-additions.html" . }}
+</head>

@@ -1,0 +1,45 @@
+{{/* Debug: Header partial rendering */}}
+{{ warnf "DEBUG: Rendering header with BaseURL=%s Title=%s" .Site.BaseURL .Site.Title }}
+<header class="site-header" style="background: var(--brand-primary); color: var(--text-on-primary); position: sticky; top: 0; z-index: 100;">
+  <div class="header-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem;">
+    {{/* Debug: Logo URL */}}
+    {{ warnf "DEBUG: Logo relURL -> %s" ("images/heidegrill-logo.png" | relURL) }}
+    <a href="{{ .Site.BaseURL }}" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="{{ "images/heidegrill-logo.png" | relURL }}" alt="{{ .Site.Title }}" style="height: 40px; margin-right: 0.5rem;">
+      <span style="font-size: 1.25rem; font-weight: bold; color: var(--text-on-primary);">{{ .Site.Title }}</span>
+    </a>
+    <button id="nav-toggle" aria-label="Toggle navigation" style="background:none; border:none; color: var(--text-on-primary); font-size:1.5rem; display:none;">
+      ☰
+    </button>
+    <nav id="main-nav" aria-label="Hauptnavigation" style="display: flex;">
+      <ul style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
+        {{ range .Site.Menus.main }}
+          {{ warnf "DEBUG: Menu item - Name: %s, URL: %s" .Name .URL }}
+          <li><a href="{{ .URL }}" style="color: var(--text-on-primary); text-decoration: none; font-weight: 600;">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+  {{/* Submenu for sections like Speisekarte categories */}}
+</header>
+<script>
+// Mobile nav toggle
+const toggle = document.getElementById('nav-toggle');
+const nav = document.getElementById('main-nav');
+toggle.addEventListener('click', () => {
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+});
+// Show toggle on small screens
+const mq = window.matchMedia('(max-width: 768px)');
+function handleWidth(e) {
+  if (e.matches) {
+    toggle.style.display = 'block';
+    nav.style.display = 'none';
+  } else {
+    toggle.style.display = 'none';
+    nav.style.display = 'flex';
+  }
+}
+mq.addListener(handleWidth);
+handleWidth(mq);
+</script>

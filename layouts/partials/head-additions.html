@@ -1,0 +1,12 @@
+{{/* layouts/partials/head-additions.html */}}
+{{- with .Site.Params.customCSS -}}
+  {{- range . -}}
+    <link rel="stylesheet" href="{{ . | relURL }}">
+  {{- end -}}
+{{- end -}}
+
+{{- with .Site.Params.customJS -}}
+  {{- range . -}}
+    <script defer src="{{ . | relURL }}"></script>
+  {{- end -}}
+{{- end -}}

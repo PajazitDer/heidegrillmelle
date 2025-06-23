@@ -1,0 +1,69 @@
+baseURL       = "https://heidegrillmelle.de/"
+title         = "Imbiss Heide Grill"
+languageCode  = "de-de"
+theme         = "ananke"
+canonifyURLs  = true
+
+[params]
+  # your existing custom CSS/JS
+  customCSS    = ["css/custom.css"]
+  customJS     = ["js/submenu.js"]
+
+  # SEO / general metadata
+  description  = "Imbiss Heide Grill – Ihr beliebter Treffpunkt in Melle für Bratwurst, Schnitzel, Burger & mehr!"
+  keywords     = ["Imbiss","Heide Grill","Melle","Fast Food","Schnitzel","Bratwurst"]
+  author       = "Imbiss Heide Grill"
+  # point to your favicon(s)
+  favicon      = "images/favicon.ico"
+  touchicon    = "images/apple-touch-icon.png"
+
+  # OpenGraph / Twitter Card
+  ogImage      = "images/social-preview.png"
+  twitterCard  = "summary_large_image"
+  twitterSite  = "@HeideGrillMelle"
+
+  # LocalBusiness / JSON-LD
+  organization = "Imbiss Heide Grill"
+  logo         = "images/heidegrill-logo.png"
+  street       = "Betonstraße 01"
+  city         = "49324 Melle"
+  phone        = "+49 5422 9289993"
+  email        = "info@heidegrillmelle.de"
+  openingHours = [
+    "Mo-Sa 11:00-14:00", 
+    "Mo-Sa 17:00-21:00", 
+    "Su      17:00-21:00"
+  ]
+
+# ensure we output a JSON feed, sitemap, robots, etc.
+[outputs]
+  home = ["HTML","RSS","JSON"] 
+
+
+[menu]
+
+  [[menu.main]]
+    name   = "Home"
+    url    = "/"
+    weight = 1
+
+  [[menu.main]]
+    name   = "Speisekarte"
+    url    = "#wuerstchen"
+    weight = 2
+
+  [[menu.main]]
+    name   = "Getränke"
+    url    = "#getraenke"
+    weight = 3
+
+  [[menu.main]]
+    name   = "Kontakt"
+    url    = "#kontakt"
+    weight = 4
+
+  [[menu.main]]
+    name   = "Blog"
+    url    = "#blog"
+    weight = 5
+

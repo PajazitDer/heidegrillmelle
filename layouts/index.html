@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+  <!-- 1) Intro from _index.md -->
+  <article class="hero-intro">
+    {{ .Content }}
+    <p><a href="#speisekarte" class="button">Zur Speisekarte</a></p>
+  </article>
+
+  <!-- 2) Speisekarte, getraenke, kontakt -->
+  {{ partial "speisekarte.html" . }}
+  {{ partial "getraenke.html"   . }}
+  {{ partial "kontakt.html"     . }}
+
+{{ end }}

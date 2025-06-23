@@ -1,0 +1,11 @@
+{{/* layouts/partials/scripts.html */}}
+
+<!-- Hugo’s live‐reload when running `hugo server` -->
+{{ if .Site.IsServer }}
+  <script src="http://localhost:1313/livereload.js"></script>
+{{ end }}
+
+<!-- Your custom site scripts (from config.toml) -->
+{{ range .Site.Params.customJS }}
+  <script src="{{ . | relURL }}" defer></script>
+{{ end }}

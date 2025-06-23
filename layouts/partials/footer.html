@@ -1,0 +1,58 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Contact Info -->
+    <div class="footer-section footer-contact">
+      <h4>Imbiss Heide Grill</h4>
+      <address>
+        Betonstraße 01<br>
+        49324 Melle
+      </address>
+      <p>📞 <a href="tel:+4954229289993">+49 5422 9289993</a></p>
+      <p>✉️ <a href="mailto:info@heidegrillmelle.de">info@heidegrillmelle.de</a></p>
+    </div>
+
+    <!-- Opening Hours -->
+    <div class="footer-section footer-hours">
+      <h4>Öffnungszeiten</h4>
+      <p>Mo – Sa: 11:00 – 14:00 &amp; 17:00 – 21:00</p>
+      <p>So: 17:00 – 21:00</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section footer-links">
+      <h4>Schnellzugriff</h4>
+      <ul>
+        <li><a href="{{ "/" | relURL }}">Home</a></li>
+        <li><a href="{{ "/#speisekarte" | relURL }}">Speisekarte</a></li>
+        <li><a href="{{ "/#getraenke"    | relURL }}">Getränke</a></li>
+        <li><a href="{{ "/#kontakt"      | relURL }}">Kontakt</a></li>
+        <li><a href="{{ "/#blog"      | relURL }}">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Social & Reviews -->
+    <div class="footer-section footer-social">
+      <h4>Folge uns</h4>
+      <ul class="social-icons">
+        <li>
+          <a href="https://g.page/r/Cc8nu1qekIcWEAE/review" target="_blank" rel="noopener">
+            <img src="{{ "images/social/maps.svg"     | relURL }}" alt="Google Maps">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/deinprofil" target="_blank" rel="noopener">
+            <img src="{{ "images/social/instagram.svg" | relURL }}" alt="Instagram">
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/4954229289993" target="_blank" rel="noopener">
+            <img src="{{ "images/social/whatsapp.svg"  | relURL }}" alt="WhatsApp">
+          </a>
+        </li>
+      </ul>
+
+     
+  <div class="footer-bottom">
+    &copy; {{ now.Format "2006" }} Imbiss Heide Grill. Alle Rechte vorbehalten.
+  </div>
+</footer>

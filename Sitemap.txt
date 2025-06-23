@@ -1,0 +1,42 @@
+heidegrillmelle/
+├── archetypes/               
+│   └── default.md            # Hugo archetype for new content
+├── assets/                   
+│   └── css/
+│       └── custom.css        # your custom styles (brand colors, grids)
+├── content/                  
+│   ├── _index.md             # homepage intro + heroImage front-matter
+│   └── blog/                 # future blog posts go here
+│       └── my-first-post.md
+├── data/                     
+│   └── menu.yaml             # your full menu data
+├── layouts/                  
+│   ├── _default/
+│   │   └── baseof.html       # overrides Ananke’s base layout (includes our partials)
+│   └── partials/             
+│       ├── header.html       # (optional) custom header/nav
+│       ├── menu-categories.html  # dish-submenu links (Würstchen, Schnitzel…)
+│       ├── speisekarte.html  # loops through data/menu.yaml & renders categories
+│       ├── getraenke.html    # beverage section partial
+│       ├── kontakt.html      # contact form, map & address
+│       └── reservierungen.html # reservation info or form
+├── static/                   
+│   ├── img/                  
+│   │   ├── wuerstchen.png
+│   │   ├── schnitzel.png
+│   │   ├── burger.png
+│   │   ├── bratkartoffeln.png
+│   │   ├── gyros.png
+│   │   ├── kotelett.png
+│   │   ├── pommes.png
+│   │   ├── frikadelle.png
+│   │   └── salat.png         # all your banner images
+│   └── js/
+│       └── submenu.js        # optional “active tab” scroll script
+├── themes/
+│   └── ananke/               # your Hugo theme submodule
+├── config.toml               # site config (menus, params, customCSS/JS)
+├── docker-compose.yml        # brings up Hugo + MailHog
+├── README.md                 # project overview & local-dev instructions
+└── .gitignore                # ignore node_modules, public/, etc.
+
