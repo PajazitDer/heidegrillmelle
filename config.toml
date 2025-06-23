@@ -1,9 +1,19 @@
-baseURL       = "https://heidegrillmelle.de/"
+baseURL       = "https://heidegrillmelle.de/"  # can stay — overridden by Netlify env
 title         = "Imbiss Heide Grill"
-languageCode  = "de-de"
 theme         = "ananke"
-canonifyURLs  = true
+languageCode  = "de-de"
 
+relativeURLs  = true
+canonifyURLs  = false
+
+[minify]
+  disableXML = false
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+    [minify.tdewolff.css]
+      keepCSS2       = false
+      
 [params]
   # your existing custom CSS/JS
   customCSS    = ["css/custom.css"]

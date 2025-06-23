@@ -15,10 +15,11 @@
         <h2>{{ .title }}</h2>
         <!-- straight image tag, lazy‐loaded -->
         <img
-          src="{{ printf "/images/%s" .img }}"
+          src="{{ printf "images/%s" .img | relURL }}"
           alt="{{ .title }} Banner"
           loading="lazy"
-          decoding="async"
+          width="800"
+          height="auto"
         />
       </div>
 
