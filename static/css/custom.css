@@ -37,6 +37,9 @@ body {
   height: var(--scroll-offset);
   visibility: hidden;
 }
+.site-hero::before {
+  background: transparent !important;
+}
 
 .menu-hero {
   text-align: center;
