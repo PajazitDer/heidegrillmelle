@@ -2,9 +2,8 @@
   command   = "hugo --gc --minify"
   publish   = "public"
 
-[context.production.environment]
-  HUGO_BASEURL = "https://heidegrillmelle.netlify.app"
-
-[dev]
-  command = "hugo server -D"
-  port    = 1313
+[build.environment]
+  # pick the Hugo version you’ve been testing locally
+  HUGO_VERSION = "0.123.7"
+  # optional, but good for extended-image features:
+  HUGO_BUILDMODE = "extended"
