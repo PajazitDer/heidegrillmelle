@@ -159,8 +159,6 @@ body {
   margin-top: 1.5rem;
 }
 
-@media (max-width: 600px) {
-  .site-hero { padding: 3rem 1rem; }
 }
 .site-footer {
   background: var(--brand-primary);
