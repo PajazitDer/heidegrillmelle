@@ -1,5 +1,4 @@
 # data/menu.yaml
-categories:# data/menu.yaml
 categories:
   - id: wuerstchen
     title: "Würstchen"
