@@ -77,7 +77,6 @@ categories:
         
 
   - id: burger
-  - id: burger
     title: "Burger"
     img: "burger.png"
     items:
