@@ -136,6 +136,12 @@ categories:
       - name: "Räuberkotelett"
         desc: "eine Hälfte mit Jägersauce und eine Hälfte mit Zigeunersauce belegt"
         price: 7.00
+     - name: "Zwiebelkotelett"
+        desc: .....
+        price: 6.5
+     - name: "Jägerkotelett"
+        desc: .....
+        price: 6.70
 
   - id: gyros
     title: "Gyros"
@@ -167,15 +173,19 @@ categories:
     img: "salat.png"
     items:
       - name: "Kleiner Salatteller"
+        desc: .... 
         price: 4.00
       - name: "Großer Salatteller"
+        desc: .... 
         price: 5.00
       - name: "Kartoffelsalat"
         desc: "*Hergestellt mit Konservierungsstoffen (Benzoat und Sorbinsäure)"
         price: 2.50
       - name: "Gurkensalat"
+        desc: ....   
         price: 3.00
       - name: "Krautsalat"
+        desc: .... 
         price: 2.50
 
   - id: wuerstchen
@@ -186,16 +196,22 @@ categories:
         desc: "Lammschmidt"
         price: 3.00
       - name: "Currywurst"
+        desc: .... 
         price: 3.50
       - name: "Riesen Currywurst"
+        desc: .... 
         price: 4.50
       - name: "Zigeunerwurst"
+        desc: .... 
         price: 3.50
       - name: "Jägerwurst"
+        desc: .... 
         price: 3.70
       - name: "Krakauer"
+        desc: .... 
         price: 4.00
       - name: "Hot Dog"
+        desc: .... 
         price: 3.50
 
   - id: schnitzel-welt
