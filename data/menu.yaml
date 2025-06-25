@@ -99,7 +99,7 @@ categories:
 
   - id: chickenburger
     title: "Chickenburger"
-    img: "images/burger1.png"
+    img: "burger1.png"
     items:
       - name: "Chickenburger"
         desc: "Hähnchen Schnitte mit Salat, Tomate, Gurken…"
