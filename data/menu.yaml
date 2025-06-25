@@ -1,5 +1,183 @@
 # data/menu.yaml
+categories:# data/menu.yaml
 categories:
+  - id: wuerstchen
+    title: "Würstchen"
+    img: "wuerstchen.png"
+    items:
+      - name: "Bratwurst"
+        desc: "Lammschmidt"
+        price: 3.00
+      - name: "Currywurst"
+        price: 3.50
+      - name: "Riesen Currywurst"
+        price: 4.50
+      - name: "Zigeunerwurst"
+        price: 3.50
+      - name: "Jägerwurst"
+        price: 3.70
+      - name: "Krakauer"
+        price: 4.00
+      - name: "Hot Dog"
+        price: 3.50
+
+  - id: schnitzel-welt
+    title: "Schnitzel Welt"
+    img: "schnitzel-menu.png"
+    items:
+      - name: "Schnitzel (250g)"
+        price: 7.00
+      - name: "Zwiebelschnitzel"
+        price: 7.50
+      - name: "Zigeunerschnitzel"
+        price: 7.50
+      - name: "Jägerschnitzel"
+        price: 7.70
+      - name: "XXL Schnitzel (500g)"
+        price: 13.00
+        xxl: true
+      - name: "Räuberschnitzel"
+        desc: "eine Hälfte mit Jägersauce und eine Hälfte mit Zigeunersauce belegt"
+        price: 8.00
+      - name: "Schnitzel Heide Grill"
+        desc: "mit gedünsteten Zwiebeln und Sauce Hollandaise, Pommes und Getränk"
+        price: 12.00
+      - name: "Schlemmer-Schnitzel"
+        desc: "mit Pilzen in Sauce Bernaise und Käse überbacken, Pommes und Getränk"
+        price: 15.00
+      - name: "Holsteiner-Schnitzel"
+        desc: "mit 2 Spiegeleiern belegt, Pommes und Getränk"
+        price: 13.50
+      - name: "Hawaii-Schnitzel"
+        desc: "belegt mit Ananas und mit Käse überbacken, Pommes und Getränk"
+        price: 13.00
+      - name: "Schnitzel Kräftig Und Deftig"
+        price: 16.00
+        desc: "mit Spiegelei, Sauce Hollandaise und Käse überbacken, Pommes und Getränk"
+      - name: "Holländer-Schnitzel"
+        price: 16.00
+        desc: "Mit Spargel, Schinken, Sauce Hollandaise und Käse überbacken, Pommes und Getränk"
+      - name: "Heide Grill Spezial"
+        price: 16.00
+        desc: "mit Speck, Zwiebeln, Pilze und Röhrlei belegt, Pommes und Getränk"
+      - name: "Schnitzel Marco Polo"
+        price: 18.00
+        desc: "mit Gyros und Tzaziki, mit Käse überbacken, Pommes und Getränk"
+      - name: "Esmeralda"
+        price: 14.50
+        desc: "mit Pilzen und Tomaten-Sahnesauce, mit Käse überbacken, Pommes und Getränk"
+      - name: "Zwiebel-Schnitzel Spezial"
+        price: 14.00
+        desc: "mit frischen Zwiebeln, mit Käse überbacken, Pommes und Getränk"
+      - name: "Tomaten Mozzarella Schnitzel"
+        price: 13.50
+        desc: "mit Pommes und Getränk"
+      - name: "Damen Schnitzel"
+        price: 13.00
+        desc: "mit Mirach, Sauce Hollandaise und mit Käse überbacken, Pommes und Getränk"
+
+  - id: burger
+  - id: burger
+    title: "Burger"
+    img: "burger.png"
+    items:
+      - name: "Hamburger"
+        desc: "Rindfleischpatty mit Salat, Tomate, Gurken, Zwiebeln, Curryketchup und Remoulade"
+        price: 4.00
+      - name: "Hamburger XL"
+        desc: "180 g Rindfleischpatty mit Salat, Tomate…"
+        price: 5.50
+      - name: "Hamburger XXL"
+        desc: "340 g Rindfleischpatty mit Salat, Tomate…"
+        price: 10.00
+        xxl: true
+      - name: "Cheeseburger"
+        desc: "Rindfleischpatty mit Käse, Salat, Tomate, Gurken…"
+        price: 4.30
+      - name: "Hawaiiburger"
+        desc: "Rindfleischpatty mit Käse, Ananas, Salat…"
+        price: 4.70
+
+  - id: chickenburger
+    title: "Chickenburger"
+    img: "images/burger1.png"
+    items:
+      - name: "Chickenburger"
+        desc: "Hähnchen Schnitte mit Salat, Tomate, Gurken…"
+        price: 4.00
+
+  - id: kartoffel-varianten
+    title: "Kartoffel Varianten"
+    img: "bratkartoffeln.png"
+    items:
+      - name: "Portion Bratkartoffeln"
+        desc: "Herzhafte Bratkartoffeln"
+        price: 3.50
+      - name: "Pommes Frites"
+        desc: "Knusprig und Goldbraun: Unsere Pommes Frites"
+        price: 2.50
+      - name: "Kroketten"
+        desc: "Goldbraune Kroketten"
+        price: 2.50
+      - name: "Ketchup"
+        price: 0.70
+      - name: "Fritten Sauce"
+        price: 0.70
+
+  - id: kotelett
+    title: "Kotelett"
+    img: "kotelett.png"
+    items:
+      - name: "Kotelett"
+        desc: "250 g"
+        price: 6.00
+      - name: "Zigeunerkotelett"
+        price: 6.50
+      - name: "Räuberkotelett"
+        desc: "eine Hälfte mit Jägersauce und eine Hälfte mit Zigeunersauce belegt"
+        price: 7.00
+
+  - id: gyros
+    title: "Gyros"
+    img: "gyros.png"
+    items:
+      - name: "Gyros Pita"
+        desc: "Gyros, Kraut, Tzatziki und Zwiebeln"
+        price: 5.50
+      - name: "Gyros Teller"
+        desc: "Gyros Teller mit Krautsalat, Tzatziki und Pommes"
+        price: 10.50
+
+  - id: weitere-spezialitaeten
+    title: "Weitere Spezialitäten"
+    img: "frikadelle.png"
+    items:
+      - name: "Frikadelle"
+        desc: "125 g"
+        price: 3.00
+      - name: "Chicken Nuggets"
+        desc: "6 Stück"
+        price: 4.50
+      - name: "Seelachsfilet"
+        desc: "Zartes Seelachsfilet"
+        price: 6.00
+
+  - id: salat
+    title: "Salat"
+    img: "salat.png"
+    items:
+      - name: "Kleiner Salatteller"
+        price: 4.00
+      - name: "Großer Salatteller"
+        price: 5.00
+      - name: "Kartoffelsalat"
+        desc: "*Hergestellt mit Konservierungsstoffen (Benzoat und Sorbinsäure)"
+        price: 2.50
+      - name: "Gurkensalat"
+        price: 3.00
+      - name: "Krautsalat"
+        price: 2.50
+
   - id: wuerstchen
     title: "Würstchen"
     img: "wuerstchen.png"
