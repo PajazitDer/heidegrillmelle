@@ -136,10 +136,10 @@ categories:
       - name: "Räuberkotelett"
         desc: "eine Hälfte mit Jägersauce und eine Hälfte mit Zigeunersauce belegt"
         price: 7.00
-     - name: "Zwiebelkotelett"
+      - name: "Zwiebelkotelett"
         desc: .....
         price: 6.5
-     - name: "Jägerkotelett"
+      - name: "Jägerkotelett"
         desc: .....
         price: 6.70
 
